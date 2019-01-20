@@ -1,0 +1,25 @@
+Time spent: 16 hours (2 8-hour work days)
+
+Time spent includes: reading documentation, running program many times, breaking the program,
+regular breaks, etc.
+
+Language: Python 3
+
+Platform: Google CoLab for training/evaluating
+
+Libraries/Dependencies: TensorFlow, NumPy, sklearn, keras
+How I chose model: I decided to look up the documentation tensorflow has to offer on language detection
+and replicated a large majority of the suggested model, but also referenced other language detection models
+for the shape of their model as accuracy was not increasing when I tried to implement more nodes per layer or 
+even a deeper network.
+
+How I engineered my features: I decided to go for a bag of characters approach. Similar to bag of words,
+I made an array of all the unique characters used in my data. I also capped length of each data to 140 characters
+and additionally lengthened all string under 140 characters to 140 by appending question marks. This made all the
+data uniform, although editted to an extent. So each individual data (string) had its own array of what characters
+are in the string. I feel I could have streamlined the process by not having to re-iterate through the training data
+to get the language set and character set again by simply saving those during training and reusing it by reading it
+in the make_predictions script. However, both work and I'm happy with the results given that there are 56 different
+languages and my solution reaches 60% accuracy since data set was small and uneven (biased towards certain languages).
+I could have also gone and manipulated data by creating new strings with words picked from other strings of the same 
+language and thrown together to have more data to process.

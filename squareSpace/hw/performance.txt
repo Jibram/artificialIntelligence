@@ -1,0 +1,1 @@
+Model is expected to be correct roughly about 59.400295067824096Uses Dropout after each dense layer and an adam optimizer. 80/20train/test ratio with sigmoid activations. Loss function iscategorical crossentropy. 12 Epochs of Batch Size 512.
